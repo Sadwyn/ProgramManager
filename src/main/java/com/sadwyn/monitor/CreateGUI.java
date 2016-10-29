@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
 import java.net.URL;
+import java.util.Date;
 
 
 public class CreateGUI {
@@ -18,8 +19,7 @@ public class CreateGUI {
    private JButton button;
    private static File file;
    private FileNameExtensionFilter filter;
-
-
+    private JSpinner timeSpinner;
     public static File getFile() {
         return file;
     }
@@ -34,8 +34,14 @@ public class CreateGUI {
         JPanel panel = new JPanel();
         filter = new FileNameExtensionFilter(".EXE files","exe");
          button = new JButton("Выберите файл...");
+        timeSpinner = new JSpinner( new SpinnerDateModel() );
+        JSpinner.DateEditor timeEditor = new JSpinner.DateEditor(timeSpinner, "HH:mm:ss");
+        timeSpinner.setEditor(timeEditor);
+        timeSpinner.setValue(new Date());
+
 
         panel.add(button);
+       panel.add(timeSpinner);
         frame.add(panel);
         frame.setVisible(true);
         setTrayIcon();
@@ -48,14 +54,15 @@ public class CreateGUI {
                 int returnVal = chooser.showDialog(frame,"Открыть файл");
                 if(returnVal == JFileChooser.APPROVE_OPTION) {
                     file = chooser.getSelectedFile();
-                    startChooser();
+                 Date date = (Date) timeSpinner.getModel().getValue();
+                    startThread(date.getSeconds(),date.getMinutes(),date.getHours());
                 }
 
             }
         });
     }
-    public void startChooser(){
-            CheckThread checkThread = new CheckThread();
+    public void startThread(int sec, int min, int hour){
+            CheckThread checkThread = new CheckThread(sec,min,hour,file);
             Thread thread = new Thread(checkThread);
             thread.start();
     }

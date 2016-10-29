@@ -1,16 +1,39 @@
 package com.sadwyn.monitor;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 
 public class CheckThread implements Runnable{
+    private int sec;
+    private int mins;
+    private int hours;
+    private boolean IsMatch = true;
+    private File file;
+
+    public CheckThread(int sec, int mins, int hours,File file) {
+        this.sec = sec;
+        this.mins = mins;
+        this.hours = hours;
+        this.file = file;
+    }
 
     @Override
     public void run() {
-        try {
-            Runtime.getRuntime().exec(CreateGUI.getFile().getAbsolutePath());
-        } catch (IOException e) {
-            e.printStackTrace();
+        while (IsMatch) {
+            {
+                try {
+                    Thread.sleep(1000);
+                    if(new Date().getHours()==hours && new Date().getMinutes()==mins && new Date().getSeconds()==sec) {
+                        Runtime.getRuntime().exec(file.getAbsolutePath());
+                        IsMatch = false;
+                    }
+                } catch (InterruptedException | IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
         }
     }
 }

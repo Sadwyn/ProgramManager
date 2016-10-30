@@ -18,7 +18,7 @@ import java.util.Vector;
 
 
 public class CreateGUI {
-   private JFrame frame;
+   private static JFrame frame;
    private JFileChooser chooser;
    private JButton button;
    private static File file;
@@ -27,6 +27,10 @@ public class CreateGUI {
     private static TrayIcon trayIcon;
     private static ArrayList<String> arrayList = new ArrayList<>();
     private static JList list;
+
+    public static JFrame getFrame() {
+        return frame;
+    }
 
     public static JList getList() {
         return list;
@@ -49,6 +53,7 @@ public class CreateGUI {
         frame.setLocationRelativeTo(null);
 
         JPanel panel = new JPanel();
+
         filter = new FileNameExtensionFilter(".EXE files","exe");
          button = new JButton("Выберите файл...");
         timeSpinner = new JSpinner( new SpinnerDateModel() );
@@ -58,16 +63,11 @@ public class CreateGUI {
 
         list = new JList();
         list.setLayoutOrientation(JList.VERTICAL);
-        list.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                list.updateUI();
-            }
-        });
+
 
         panel.add(list);
         panel.add(button);
-       panel.add(timeSpinner);
+        panel.add(timeSpinner);
         panel.setBackground(Color.lightGray);
         frame.add(panel);
         frame.setVisible(true);

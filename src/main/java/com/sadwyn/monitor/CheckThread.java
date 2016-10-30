@@ -35,6 +35,9 @@ public class CheckThread implements Runnable{
                         Runtime.getRuntime().exec(file.getAbsolutePath());
                         IsMatch = false;
                         CreateGUI.getArrayList().remove(file.getName());
+                        if(!CreateGUI.getFrame().isVisible()){
+                            CreateGUI.getTrayIcon().displayMessage("Info", "Программа "+file.getName()+" запущена.", TrayIcon.MessageType.INFO);
+                        }
                         CreateGUI.getList().setListData(new Vector<String>(CreateGUI.getArrayList()));
                     }
                 } catch (InterruptedException | IOException e) {

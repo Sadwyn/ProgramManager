@@ -1,8 +1,10 @@
 package com.sadwyn.monitor;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Vector;
 
 
 public class CheckThread implements Runnable{
@@ -25,9 +27,15 @@ public class CheckThread implements Runnable{
             {
                 try {
                     Thread.sleep(1000);
+                    if(new Date().getHours()==hours && (new Date().getMinutes()==mins && new Date().getSeconds()==sec-30)||
+                            new Date().getMinutes()!=mins&& new Date().getSeconds()==sec+30) {
+                        CreateGUI.getTrayIcon().displayMessage("Info","Программа "+file.getName()+" будет запущена через 30 сек.", TrayIcon.MessageType.INFO);
+                    }
                     if(new Date().getHours()==hours && new Date().getMinutes()==mins && new Date().getSeconds()==sec) {
                         Runtime.getRuntime().exec(file.getAbsolutePath());
                         IsMatch = false;
+                        CreateGUI.getArrayList().remove(file.getName());
+                        CreateGUI.getList().setListData(new Vector<String>(CreateGUI.getArrayList()));
                     }
                 } catch (InterruptedException | IOException e) {
                     e.printStackTrace();

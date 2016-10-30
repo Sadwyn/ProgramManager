@@ -2,6 +2,8 @@ package com.sadwyn.monitor;
 
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +12,9 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Vector;
 
 
 public class CreateGUI {
@@ -20,8 +24,20 @@ public class CreateGUI {
    private static File file;
    private FileNameExtensionFilter filter;
     private JSpinner timeSpinner;
-    public static File getFile() {
-        return file;
+    private static TrayIcon trayIcon;
+    private static ArrayList<String> arrayList = new ArrayList<>();
+    private static JList list;
+
+    public static JList getList() {
+        return list;
+    }
+
+    public static ArrayList<String> getArrayList() {
+        return arrayList;
+    }
+
+    public static TrayIcon getTrayIcon() {
+        return trayIcon;
     }
 
     public void GUI() {
@@ -31,6 +47,7 @@ public class CreateGUI {
         frame.setMinimumSize(new Dimension(400, 200));
         frame.setDefaultCloseOperation(Frame.ICONIFIED);
         frame.setLocationRelativeTo(null);
+
         JPanel panel = new JPanel();
         filter = new FileNameExtensionFilter(".EXE files","exe");
          button = new JButton("Выберите файл...");
@@ -39,9 +56,19 @@ public class CreateGUI {
         timeSpinner.setEditor(timeEditor);
         timeSpinner.setValue(new Date());
 
+        list = new JList();
+        list.setLayoutOrientation(JList.VERTICAL);
+        list.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                list.updateUI();
+            }
+        });
 
+        panel.add(list);
         panel.add(button);
        panel.add(timeSpinner);
+        panel.setBackground(Color.lightGray);
         frame.add(panel);
         frame.setVisible(true);
         setTrayIcon();
@@ -53,8 +80,11 @@ public class CreateGUI {
                 chooser.setFileFilter(filter);
                 int returnVal = chooser.showDialog(frame,"Открыть файл");
                 if(returnVal == JFileChooser.APPROVE_OPTION) {
+
                     file = chooser.getSelectedFile();
-                 Date date = (Date) timeSpinner.getModel().getValue();
+                    arrayList.add(file.getName());
+                    list.setListData(new Vector<String>(arrayList));
+                    Date date = (Date) timeSpinner.getModel().getValue();
                     startThread(date.getSeconds(),date.getMinutes(),date.getHours());
                 }
 
@@ -82,10 +112,11 @@ public class CreateGUI {
         popupMenu.add(item);
         URL url = Main.class.getResource("/ico.png");
         Image icon = Toolkit.getDefaultToolkit().getImage(url);
-        TrayIcon trayIcon = new TrayIcon(icon);
+        trayIcon = new TrayIcon(icon);
         trayIcon.setImageAutoSize(true);
         trayIcon.setPopupMenu(popupMenu);
         SystemTray tray = SystemTray.getSystemTray();
+
 
         //Добавляю обработчик на двойной клик по иконке
         trayIcon.addMouseListener(new MouseListener() {

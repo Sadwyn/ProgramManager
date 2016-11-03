@@ -1,6 +1,5 @@
 package com.sadwyn.monitor;
 
-
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -16,13 +15,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Vector;
 
-
 public class CreateGUI {
-   private static JFrame frame;
-   private JFileChooser chooser;
-   private JButton button;
-   private static File file;
-   private FileNameExtensionFilter filter;
+    private static JFrame frame;
+    private JFileChooser chooser;
+    private JButton button;
+    private static File file;
+    private FileNameExtensionFilter filter;
     private JSpinner timeSpinner;
     private static TrayIcon trayIcon;
     private static ArrayList<String> arrayList = new ArrayList<>();
@@ -54,9 +52,9 @@ public class CreateGUI {
 
         JPanel panel = new JPanel();
 
-        filter = new FileNameExtensionFilter(".EXE files","exe");
-         button = new JButton("Выберите файл...");
-        timeSpinner = new JSpinner( new SpinnerDateModel() );
+        filter = new FileNameExtensionFilter(".EXE files", "exe");
+        button = new JButton("Выберите файл...");
+        timeSpinner = new JSpinner(new SpinnerDateModel());
         JSpinner.DateEditor timeEditor = new JSpinner.DateEditor(timeSpinner, "HH:mm:ss");
         timeSpinner.setEditor(timeEditor);
         timeSpinner.setValue(new Date());
@@ -73,34 +71,37 @@ public class CreateGUI {
         frame.setVisible(true);
         setTrayIcon();
         chooser = new JFileChooser();
+        //обработчик на кнопку
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 chooser.setFileFilter(filter);
-                int returnVal = chooser.showDialog(frame,"Открыть файл");
-                if(returnVal == JFileChooser.APPROVE_OPTION) {
+                int returnVal = chooser.showDialog(frame, "Открыть файл");
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
 
                     file = chooser.getSelectedFile();
                     arrayList.add(file.getName());
                     list.setListData(new Vector<String>(arrayList));
                     Date date = (Date) timeSpinner.getModel().getValue();
-                    startThread(date.getSeconds(),date.getMinutes(),date.getHours());
+                    //передаю параметры в новый поток при его создании
+                    startThread(date.getSeconds(), date.getMinutes(), date.getHours());
                 }
 
             }
         });
     }
-    public void startThread(int sec, int min, int hour){
-            CheckThread checkThread = new CheckThread(sec,min,hour,file);
-            Thread thread = new Thread(checkThread);
-            thread.start();
+
+    public void startThread(int sec, int min, int hour) {
+        CheckThread checkThread = new CheckThread(sec, min, hour, file);
+        Thread thread = new Thread(checkThread);
+        thread.start();
     }
 
     //генерация трея
-    public void setTrayIcon(){
+    public void setTrayIcon() {
 
-        if(!SystemTray.isSupported()) return;
+        if (!SystemTray.isSupported()) return;
         PopupMenu popupMenu = new PopupMenu();
         MenuItem item = new MenuItem("Exit");
         item.addActionListener(new ActionListener() {
@@ -122,7 +123,7 @@ public class CreateGUI {
         trayIcon.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(e.getClickCount()==2) {
+                if (e.getClickCount() == 2) {
                     frame.setState(Frame.NORMAL);
                     frame.setVisible(true);
                 }

@@ -7,9 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb036be-650a-4915-af69-105ee2b37eaf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Prog/Prog.jar" afterPath="$PROJECT_DIR$/out/artifacts/Prog/Prog.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CheckThread.class" afterPath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CheckThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI$1.class" afterPath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI$2.class" afterPath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI$3.class" afterPath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI.class" afterPath="$PROJECT_DIR$/target/classes/com/sadwyn/monitor/CreateGUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java" afterPath="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java" afterPath="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java" />
     </list>
     <ignored path="HistoryMonitor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +42,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,16 +52,10 @@
       <file leaf-file-name="CreateGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+            <state relative-caret-position="2533">
+              <caret line="159" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
-                <element signature="e#909#910#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +64,8 @@
       <file leaf-file-name="CheckThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="408">
+              <caret line="24" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,6 +85,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Sadwyn &lt;sadwyn1@gmail.com&gt;" />
         <option value="Sadwyn" />
       </list>
     </option>
@@ -102,12 +104,12 @@
         <option value="$PROJECT_DIR$/src/com/sadwyn/monitor/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sadwyn/monitor/CheckThread.java" />
         <option value="$PROJECT_DIR$/src/com/sadwyn/monitor/CreateGUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/TimeCounter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java" />
       </list>
     </option>
   </component>
@@ -163,6 +165,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,9 +268,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,7 +347,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -368,7 +373,10 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
@@ -780,7 +788,9 @@
       <workItem from="1477725516730" duration="21394000" />
       <workItem from="1477749443021" duration="11640000" />
       <workItem from="1477779105714" duration="7507000" />
-      <workItem from="1477812256326" duration="3632000" />
+      <workItem from="1477812256326" duration="3697000" />
+      <workItem from="1477857603726" duration="254000" />
+      <workItem from="1478149160337" duration="1338000" />
     </task>
     <task id="LOCAL-00001" summary="Потоки работают правильно, приложения запускаються последовательно">
       <created>1477781952772</created>
@@ -803,11 +813,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477813446652</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавил список запущеных программ">
+      <created>1477815972966</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477815972966</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46365000" />
+    <option name="totallyTimeSpent" value="48022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -877,16 +894,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -915,12 +982,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -949,12 +1010,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1018,9 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="1610" column="0" selection-start-line="1610" selection-start-column="0" selection-end-line="1610" selection-end-column="0" />
-          <folding>
-            <element signature="e#62916#62917#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,34 +1127,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/TimeCounter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="2533">
+          <caret line="159" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CreateGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sadwyn/monitor/CheckThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="408">
+          <caret line="24" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

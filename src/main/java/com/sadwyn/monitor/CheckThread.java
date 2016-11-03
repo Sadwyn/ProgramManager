@@ -26,11 +26,13 @@ public class CheckThread implements Runnable{
         while (IsMatch) {
             {
                 try {
+                    //проверка на уведомление за 30 секунд до запуска
                     Thread.sleep(1000);
                     if(new Date().getHours()==hours && (new Date().getMinutes()==mins && new Date().getSeconds()==sec-30)||
                             new Date().getMinutes()!=mins&& new Date().getSeconds()==sec+30) {
                         CreateGUI.getTrayIcon().displayMessage("Info","Программа "+file.getName()+" будет запущена через 30 сек.", TrayIcon.MessageType.INFO);
                     }
+                    //проверка на запуск
                     if(new Date().getHours()==hours && new Date().getMinutes()==mins && new Date().getSeconds()==sec) {
                         Runtime.getRuntime().exec(file.getAbsolutePath());
                         IsMatch = false;
@@ -43,7 +45,6 @@ public class CheckThread implements Runnable{
                 } catch (InterruptedException | IOException e) {
                     e.printStackTrace();
                 }
-
             }
         }
     }
